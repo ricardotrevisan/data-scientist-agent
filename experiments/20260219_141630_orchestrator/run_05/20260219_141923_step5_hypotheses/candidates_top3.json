@@ -1,0 +1,101 @@
+[
+  {
+    "id": "H02",
+    "name": "Long after negative extreme z-score",
+    "rationale": "Symmetric mean-reversion for downside stretch.",
+    "expected_regime": "Short-lived panic downticks.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 16508,
+        "net_pnl": 1959.0,
+        "profit_factor": 1.4562179785747555,
+        "hit_rate": 0.3787860431306033,
+        "avg_pnl_per_trade": 0.1186697358856312
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 5728,
+        "net_pnl": 394.0,
+        "profit_factor": 1.2142468733007068,
+        "hit_rate": 0.38983938547486036,
+        "avg_pnl_per_trade": 0.06878491620111732
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 5700,
+        "net_pnl": 819.0,
+        "profit_factor": 1.4296956977964324,
+        "hit_rate": 0.4780701754385965,
+        "avg_pnl_per_trade": 0.1436842105263158
+      }
+    },
+    "rank_score": 478.4132680804785
+  },
+  {
+    "id": "H08",
+    "name": "Contrarian on ret_sum_5",
+    "rationale": "Quick mean-reversion at very short lookback.",
+    "expected_regime": "Choppy microstructure periods.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 203205,
+        "net_pnl": 1101.0,
+        "profit_factor": 1.016175714390656,
+        "hit_rate": 0.34037548288673997,
+        "avg_pnl_per_trade": 0.005418173765409316
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 68114,
+        "net_pnl": 314.0,
+        "profit_factor": 1.012379750827945,
+        "hit_rate": 0.3769856417182958,
+        "avg_pnl_per_trade": 0.004609918665766216
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 72492,
+        "net_pnl": -115.0,
+        "profit_factor": 0.9962265389158682,
+        "hit_rate": 0.41881862826242894,
+        "avg_pnl_per_trade": -0.0015863819455939965
+      }
+    },
+    "rank_score": 317.88724175997476
+  },
+  {
+    "id": "H06",
+    "name": "Long when spread is unusually compressed",
+    "rationale": "Tighter spread can favor continuation with lower friction.",
+    "expected_regime": "High-liquidity micro regime.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 1785,
+        "net_pnl": 287.0,
+        "profit_factor": 1.60167714884696,
+        "hit_rate": 0.4280112044817927,
+        "avg_pnl_per_trade": 0.1607843137254902
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 265,
+        "net_pnl": 70.0,
+        "profit_factor": 1.9210526315789473,
+        "hit_rate": 0.5509433962264151,
+        "avg_pnl_per_trade": 0.2641509433962264
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 313,
+        "net_pnl": 31.0,
+        "profit_factor": 1.2818181818181817,
+        "hit_rate": 0.4504792332268371,
+        "avg_pnl_per_trade": 0.09904153354632587
+      }
+    },
+    "rank_score": 134.4736842105263
+  }
+]

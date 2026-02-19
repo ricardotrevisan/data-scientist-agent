@@ -1,0 +1,68 @@
+[
+  {
+    "id": "H01",
+    "name": "Short after positive extreme z-score",
+    "rationale": "Micro mean-reversion after stretched short-term move.",
+    "expected_regime": "High intrabar displacement without sustained follow-through.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 33694,
+        "net_pnl": 203.0,
+        "profit_factor": 1.0207757650189335,
+        "hit_rate": 0.2960170950317564,
+        "avg_pnl_per_trade": 0.0060248115391464355
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 11368,
+        "net_pnl": 407.0,
+        "profit_factor": 1.112836151926809,
+        "hit_rate": 0.3530964109781844,
+        "avg_pnl_per_trade": 0.03580225193525686
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 10806,
+        "net_pnl": -165.0,
+        "profit_factor": 0.9615205223880597,
+        "hit_rate": 0.3815472885434018,
+        "avg_pnl_per_trade": -0.01526929483620211
+      }
+    },
+    "rank_score": 452.9243138342113
+  },
+  {
+    "id": "H08",
+    "name": "Contrarian on ret_sum_5",
+    "rationale": "Quick mean-reversion at very short lookback.",
+    "expected_regime": "Choppy microstructure periods.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 203205,
+        "net_pnl": 860.0,
+        "profit_factor": 1.013188768077047,
+        "hit_rate": 0.3251248738958195,
+        "avg_pnl_per_trade": 0.004232179326296105
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 68114,
+        "net_pnl": 83.0,
+        "profit_factor": 1.00340932429657,
+        "hit_rate": 0.35863405467304815,
+        "avg_pnl_per_trade": 0.0012185453798044454
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 72492,
+        "net_pnl": 126.0,
+        "profit_factor": 1.0042550317438876,
+        "hit_rate": 0.41022457650499367,
+        "avg_pnl_per_trade": 0.0017381228273464658
+      }
+    },
+    "rank_score": 83.28297391661532
+  }
+]

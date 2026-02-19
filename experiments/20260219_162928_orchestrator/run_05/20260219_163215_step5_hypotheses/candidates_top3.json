@@ -1,0 +1,68 @@
+[
+  {
+    "id": "H01",
+    "name": "Short after positive extreme z-score",
+    "rationale": "Micro mean-reversion after stretched short-term move.",
+    "expected_regime": "High intrabar displacement without sustained follow-through.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 33694,
+        "net_pnl": 285.0,
+        "profit_factor": 1.0293905331545838,
+        "hit_rate": 0.296254526028373,
+        "avg_pnl_per_trade": 0.008458479254466671
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 11368,
+        "net_pnl": 416.0,
+        "profit_factor": 1.1156197887715398,
+        "hit_rate": 0.3530964109781844,
+        "avg_pnl_per_trade": 0.036593947923997186
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 10806,
+        "net_pnl": -145.0,
+        "profit_factor": 0.966058052434457,
+        "hit_rate": 0.3819174532667037,
+        "avg_pnl_per_trade": -0.013418471219692764
+      }
+    },
+    "rank_score": 464.09783212896053
+  },
+  {
+    "id": "H05",
+    "name": "Short when spread shock is extreme wide",
+    "rationale": "Liquidity stress often coincides with adverse short-term drift.",
+    "expected_regime": "Spread expansion events.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 3988,
+        "net_pnl": -53.0,
+        "profit_factor": 0.9627808988764045,
+        "hit_rate": 0.3437813440320963,
+        "avg_pnl_per_trade": -0.01328986960882648
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 493,
+        "net_pnl": 63.0,
+        "profit_factor": 1.3818181818181818,
+        "hit_rate": 0.46247464503042596,
+        "avg_pnl_per_trade": 0.12778904665314403
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 570,
+        "net_pnl": 16.0,
+        "profit_factor": 1.0701754385964912,
+        "hit_rate": 0.4280701754385965,
+        "avg_pnl_per_trade": 0.028070175438596492
+      }
+    },
+    "rank_score": 87.05454545454546
+  }
+]

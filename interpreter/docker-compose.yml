@@ -1,0 +1,18 @@
+services:
+  interpreter:
+    build: .
+    ports:
+      - "8123:8123"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ../eval/kaggle_data/spooky:/app/spooky:rw # should only have rw access to the two folders from mlebench here. probably not the greatest thing to have "../" in it.
+      - ../eval/kaggle_data/jigsaw:/app/jigsaw:rw
+      - ../data:/app/data:rw
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8123/health', timeout=5).getcode()==200 else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

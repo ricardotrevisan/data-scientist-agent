@@ -1,0 +1,101 @@
+[
+  {
+    "id": "H01",
+    "name": "Short after positive extreme z-score",
+    "rationale": "Micro mean-reversion after stretched short-term move.",
+    "expected_regime": "High intrabar displacement without sustained follow-through.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 16399,
+        "net_pnl": 176.0,
+        "profit_factor": 1.0306406685236769,
+        "hit_rate": 0.3609976218062077,
+        "avg_pnl_per_trade": 0.010732361729373743
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 5775,
+        "net_pnl": 374.0,
+        "profit_factor": 1.1790330301579703,
+        "hit_rate": 0.4264935064935065,
+        "avg_pnl_per_trade": 0.06476190476190476
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 5760,
+        "net_pnl": -51.0,
+        "profit_factor": 0.9798498617147372,
+        "hit_rate": 0.4305555555555556,
+        "avg_pnl_per_trade": -0.008854166666666666
+      }
+    },
+    "rank_score": 440.9583532790809
+  },
+  {
+    "id": "H08",
+    "name": "Contrarian on ret_sum_5",
+    "rationale": "Quick mean-reversion at very short lookback.",
+    "expected_regime": "Choppy microstructure periods.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 203205,
+        "net_pnl": 1394.0,
+        "profit_factor": 1.018353455426382,
+        "hit_rate": 0.38063531901281955,
+        "avg_pnl_per_trade": 0.006860067419600896
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 68114,
+        "net_pnl": 100.0,
+        "profit_factor": 1.0035459735470373,
+        "hit_rate": 0.4154946119740435,
+        "avg_pnl_per_trade": 0.0014681269636198139
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 72492,
+        "net_pnl": 209.0,
+        "profit_factor": 1.0064577926090719,
+        "hit_rate": 0.4493323401202891,
+        "avg_pnl_per_trade": 0.0028830767532969153
+      }
+    },
+    "rank_score": 100.35459735470373
+  },
+  {
+    "id": "H05",
+    "name": "Short when spread shock is extreme wide",
+    "rationale": "Liquidity stress often coincides with adverse short-term drift.",
+    "expected_regime": "Spread expansion events.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 2333,
+        "net_pnl": 23.0,
+        "profit_factor": 1.0264672036823936,
+        "hit_rate": 0.3823403343334762,
+        "avg_pnl_per_trade": 0.009858551221603087
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 441,
+        "net_pnl": 53.0,
+        "profit_factor": 1.3173652694610778,
+        "hit_rate": 0.4988662131519274,
+        "avg_pnl_per_trade": 0.12018140589569161
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 529,
+        "net_pnl": 31.0,
+        "profit_factor": 1.1409090909090909,
+        "hit_rate": 0.47448015122873344,
+        "avg_pnl_per_trade": 0.05860113421550094
+      }
+    },
+    "rank_score": 69.82035928143712
+  }
+]

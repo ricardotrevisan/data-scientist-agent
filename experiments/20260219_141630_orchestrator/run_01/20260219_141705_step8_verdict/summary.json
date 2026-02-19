@@ -1,0 +1,33 @@
+{
+  "decision": "NO-GO",
+  "candidate": "H01",
+  "inputs": {
+    "baselines_json": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01/data/wdofut_baselines_metrics.json",
+    "step6_metrics_json": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01/20260219_141705_step6_backtest/metrics.json",
+    "step7_robustness_json": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01/20260219_141705_step7_robustness/robustness.json",
+    "step7_placebo_json": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01/20260219_141705_step7_robustness/placebo.json"
+  },
+  "evidence": {
+    "baseline_oos_net_pnl_no_trade": 0.0,
+    "candidate_val_net_pnl": 339.0,
+    "candidate_test_net_pnl": -52.0,
+    "candidate_test_profit_factor": 0.9788617886178862,
+    "placebo_base_test_net_pnl": -25.0,
+    "placebo_shuffle_test_net_pnl": 7.0,
+    "placebo_invert_test_net_pnl": 25.0,
+    "sensitivity_test_positive_ratio": 0.3333333333333333
+  },
+  "thresholds": {
+    "min_test_profit_factor": 1.0,
+    "min_sensitivity_positive_ratio": 0.5,
+    "require_placebo_outperform_shuffle": true,
+    "require_inversion_nonequivalent": true
+  },
+  "rules": {
+    "beats_baseline_oos": true,
+    "test_profit_factor_ge_1.0": false,
+    "placebo_outperforms_randomized_label": false,
+    "inversion_not_equivalent": false,
+    "sensitivity_positive_ratio_ge_0.5": false
+  }
+}

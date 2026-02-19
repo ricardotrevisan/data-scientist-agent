@@ -1,0 +1,53 @@
+{
+  "rows": 558895,
+  "label_counts": {
+    "-1": 236782,
+    "0": 166216,
+    "1": 155897
+  },
+  "pct_zero": 0.29740112185652046,
+  "skewness": 0.27410199645183814,
+  "examples": [
+    {
+      "timestamp": "2026-01-02 10:10:40+00:00",
+      "price_t": 5476.75,
+      "price_hit": 5474.75,
+      "y_tb": -1,
+      "first_hit": "down"
+    },
+    {
+      "timestamp": "2026-01-02 10:10:41+00:00",
+      "price_t": 5476.75,
+      "price_hit": 5474.75,
+      "y_tb": -1,
+      "first_hit": "down"
+    },
+    {
+      "timestamp": "2026-01-02 10:10:42+00:00",
+      "price_t": 5476.75,
+      "price_hit": 5474.75,
+      "y_tb": -1,
+      "first_hit": "down"
+    },
+    {
+      "timestamp": "2026-01-02 10:10:43+00:00",
+      "price_t": 5476.75,
+      "price_hit": 5474.75,
+      "y_tb": -1,
+      "first_hit": "down"
+    },
+    {
+      "timestamp": "2026-01-02 10:10:44+00:00",
+      "price_t": 5476.75,
+      "price_hit": 5474.75,
+      "y_tb": -1,
+      "first_hit": "down"
+    }
+  ],
+  "input_reference": "/home/trevisan/repositories/open-data-scientist/data/wdofut_prepared",
+  "output_parquet": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_09/data/wdofut_labels_tb.parquet",
+  "h_minutes": 3.0,
+  "price_col": "mid",
+  "up_barrier": 0.00035,
+  "down_barrier": 0.00025
+}

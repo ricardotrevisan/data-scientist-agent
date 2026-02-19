@@ -1,0 +1,203 @@
+{
+  "input_dir": "/home/trevisan/repositories/open-data-scientist/data/wdofut_prepared",
+  "parquet_files": 18967,
+  "rows_total": 558895,
+  "schema": {
+    "timestamp": "timestamp[ns, tz=UTC]",
+    "schema_version": "int64",
+    "ticker": "string",
+    "feed": "struct<12 meses: double, 3 meses: double, 6 meses: double, Abertura: double, Ano: double, BookPack: struct<absorption_ask: double, absorption_bid: double, adding_ask: double, adding_bid: double, ask_qty: double, best_ask: double, best_bid: double, bid_qty: double, bpi: double, buy_count: double, delta_ask_qty: double, delta_bid_qty: double, delta_spread: double, delta_total_buy: double, delta_total_sell: double, depth_imbalance: double, imbalance: double, pressure_index: double, pulling_ask: double, pulling_bid: double, sell_count: double, spread: double, step_down: double, step_up: double, total_buy: double, total_sell: double>, Cont. Abertos: double, Data: string, Estado Atual: string, Fechamento Anterior: double, Hora: string, Maximo: double, Media: double, Mes: double, Minimo: double, Negocios: double, Of. Compra: double, Of. Venda: double, QUL: double, Quantidade: double, Semana: double, Semestre: double, TR - Volume de Agressao - Compra: double, TR - Volume de Agressao - Saldo: double, TR - Volume de Agressao - Venda: double, Trimestre: double, Ultimo: double, VOC: double, VOV: double, VWAP: double, Validade: string, Variacao %: double, Variacao (pts): double, Vencimento: string, Volume: double, Volume Projetado: double>",
+    "state": "struct<flow: struct<micro: struct<agressor_dom: int64, tick_dir_proxy: double>, vol: struct<intra: double, rel: double>, window: struct<buy: double, delta: double, flow_bias: double, imbalance: double, pressure: double, sell: double>>, price: struct<ask: double, bid: double, dist_to_high: double, dist_to_low: double, dist_to_vwap: double, last: double, spread: double>, structure: struct<open_interest: int64, pct_month: double>, trend: struct<bar_dir: double, bar_dir_norm: double, bpi: double>>",
+    "derived": "struct<absorption_signal: int64, agressor_pressure: double, effort_vs_result: double, flow_balance_score: double, micro_trend_strength: double>",
+    "_ts": "double",
+    "ts": "double",
+    "dt": "string",
+    "last": "double",
+    "bid": "double",
+    "ask": "double",
+    "spread": "double",
+    "dist_to_high": "double",
+    "dist_to_low": "double",
+    "dist_to_vwap": "double",
+    "buy": "double",
+    "sell": "double",
+    "delta": "double",
+    "imbalance": "double",
+    "flow_bias": "double",
+    "agressor_dom": "int64",
+    "tick_dir_proxy": "double",
+    "vol_intra": "double",
+    "vol_rel": "double",
+    "trend_bar_dir": "double",
+    "trend_bar_dir_norm": "double",
+    "trend_bpi": "double",
+    "open_interest": "int64",
+    "pct_month": "double",
+    "derived_micro_trend_strength": "double",
+    "derived_flow_balance_score": "double",
+    "derived_agressor_pressure": "double",
+    "derived_absorption_signal": "int64",
+    "derived_effort_vs_result": "double",
+    "mid": "double",
+    "log_return": "double",
+    "day": "string"
+  },
+  "rows_per_day": {
+    "2026-01-02": 19682,
+    "2026-01-05": 11243,
+    "2026-01-06": 26423,
+    "2026-01-07": 24454,
+    "2026-01-08": 25321,
+    "2026-01-09": 24718,
+    "2026-01-12": 24418,
+    "2026-01-13": 19701,
+    "2026-01-14": 25221,
+    "2026-01-15": 20602,
+    "2026-01-16": 24343,
+    "2026-01-19": 24065,
+    "2026-01-20": 23423,
+    "2026-01-21": 26583,
+    "2026-01-22": 23065,
+    "2026-01-23": 25723,
+    "2026-01-26": 23884,
+    "2026-01-27": 27609,
+    "2026-01-28": 28883,
+    "2026-01-29": 28010,
+    "2026-01-30": 26375,
+    "2026-02-02": 26318,
+    "2026-02-03": 28831
+  },
+  "null_counts": {
+    "ts": 0,
+    "timestamp": 0,
+    "spread": 0,
+    "mid": 0,
+    "log_return": 18955
+  },
+  "duplicate_ts_rows": 0,
+  "min_ts": 1767359441.426621,
+  "max_ts": 1770154174.899393,
+  "minmax_timestamp_by_day": {
+    "2026-01-02": {
+      "min": "2026-01-02 10:10:40+00:00",
+      "max": "2026-01-02 18:29:59+00:00"
+    },
+    "2026-01-05": {
+      "min": "2026-01-05 09:51:35+00:00",
+      "max": "2026-01-05 18:29:58+00:00"
+    },
+    "2026-01-06": {
+      "min": "2026-01-06 09:02:06+00:00",
+      "max": "2026-01-06 18:29:59+00:00"
+    },
+    "2026-01-07": {
+      "min": "2026-01-07 09:03:58+00:00",
+      "max": "2026-01-07 18:29:59+00:00"
+    },
+    "2026-01-08": {
+      "min": "2026-01-08 09:00:47+00:00",
+      "max": "2026-01-08 18:29:59+00:00"
+    },
+    "2026-01-09": {
+      "min": "2026-01-09 09:00:52+00:00",
+      "max": "2026-01-09 18:29:59+00:00"
+    },
+    "2026-01-12": {
+      "min": "2026-01-12 09:00:48+00:00",
+      "max": "2026-01-12 18:29:59+00:00"
+    },
+    "2026-01-13": {
+      "min": "2026-01-13 09:00:49+00:00",
+      "max": "2026-01-13 18:29:59+00:00"
+    },
+    "2026-01-14": {
+      "min": "2026-01-14 09:00:53+00:00",
+      "max": "2026-01-14 18:29:59+00:00"
+    },
+    "2026-01-15": {
+      "min": "2026-01-15 09:00:54+00:00",
+      "max": "2026-01-15 18:29:59+00:00"
+    },
+    "2026-01-16": {
+      "min": "2026-01-16 09:00:56+00:00",
+      "max": "2026-01-16 18:29:58+00:00"
+    },
+    "2026-01-19": {
+      "min": "2026-01-19 09:00:52+00:00",
+      "max": "2026-01-19 18:29:59+00:00"
+    },
+    "2026-01-20": {
+      "min": "2026-01-20 09:00:48+00:00",
+      "max": "2026-01-20 18:29:51+00:00"
+    },
+    "2026-01-21": {
+      "min": "2026-01-21 09:02:23+00:00",
+      "max": "2026-01-21 18:29:30+00:00"
+    },
+    "2026-01-22": {
+      "min": "2026-01-22 09:00:49+00:00",
+      "max": "2026-01-22 18:29:59+00:00"
+    },
+    "2026-01-23": {
+      "min": "2026-01-23 09:00:50+00:00",
+      "max": "2026-01-23 18:29:59+00:00"
+    },
+    "2026-01-26": {
+      "min": "2026-01-26 09:00:55+00:00",
+      "max": "2026-01-26 18:29:40+00:00"
+    },
+    "2026-01-27": {
+      "min": "2026-01-27 09:01:05+00:00",
+      "max": "2026-01-27 18:29:41+00:00"
+    },
+    "2026-01-28": {
+      "min": "2026-01-28 09:00:59+00:00",
+      "max": "2026-01-28 18:29:59+00:00"
+    },
+    "2026-01-29": {
+      "min": "2026-01-29 09:01:11+00:00",
+      "max": "2026-01-29 18:29:59+00:00"
+    },
+    "2026-01-30": {
+      "min": "2026-01-30 09:00:56+00:00",
+      "max": "2026-01-30 18:29:34+00:00"
+    },
+    "2026-02-02": {
+      "min": "2026-02-02 09:02:57+00:00",
+      "max": "2026-02-02 18:29:59+00:00"
+    },
+    "2026-02-03": {
+      "min": "2026-02-03 09:00:51+00:00",
+      "max": "2026-02-03 18:29:30+00:00"
+    }
+  },
+  "stats": {
+    "spread": {
+      "count": 558895.0,
+      "min": -1.5,
+      "p25": 0.5,
+      "mean": 0.5025979835210549,
+      "p50": 0.5,
+      "p75": 0.5,
+      "max": 5.5
+    },
+    "mid": {
+      "count": 558895.0,
+      "min": 0.0,
+      "p25": 5280.25,
+      "mean": 5341.852621243704,
+      "p50": 5379.75,
+      "p75": 5405.25,
+      "max": 5491.25
+    },
+    "log_return": {
+      "count": 539940.0,
+      "min": -0.0027440051281111266,
+      "p25": 0.0,
+      "mean": -9.521939142513804e-08,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 0.0026828269017169504
+    }
+  }
+}

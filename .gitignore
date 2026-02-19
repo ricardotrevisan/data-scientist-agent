@@ -1,0 +1,55 @@
+.notes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+submissions/*
+remove/*
+eval/kaggle_data/*.zip
+eval/kaggle_data/*.csv
+eval/kaggle_data/spooky/*.zip
+eval/kaggle_data/spooky/*.csv
+eval/kaggle_data/jigsaw/*.zip
+eval/kaggle_data/jigsaw/*.csv
+scripts/*
+!scripts/
+!scripts/prepare_wdofut.py
+!scripts/parquet_remount_validate.py
+!scripts/wdofut_pipeline.py
+!scripts/load_prepared_to_df.py
+!scripts/run_wdofut_step0_contract.py
+!scripts/run_wdofut_step1_audit.py
+!scripts/run_wdofut_step2_label.py
+!scripts/run_wdofut_step3_baselines.py
+!scripts/run_wdofut_step4_feature_scan.py
+!scripts/run_wdofut_step5_hypotheses.py
+!scripts/run_wdofut_step6_backtest.py
+!scripts/run_wdofut_step7_robustness.py
+!scripts/run_wdofut_step8_verdict.py
+!scripts/run_wdofut_orchestrator.py
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.cast
+*.gif
+# Virtual environment
+venv/
+env/
+.venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+#data/
+*.parquet 
+
+*.jsonl
+/*.md
+!RUNBOOK.md

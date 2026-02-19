@@ -1,0 +1,68 @@
+[
+  {
+    "id": "H01",
+    "name": "Short after positive extreme z-score",
+    "rationale": "Micro mean-reversion after stretched short-term move.",
+    "expected_regime": "High intrabar displacement without sustained follow-through.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 33694,
+        "net_pnl": 298.0,
+        "profit_factor": 1.0305390448862473,
+        "hit_rate": 0.2984507627470766,
+        "avg_pnl_per_trade": 0.008844304623968659
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 11368,
+        "net_pnl": 414.0,
+        "profit_factor": 1.1148086522462561,
+        "hit_rate": 0.35362420830401126,
+        "avg_pnl_per_trade": 0.036418015482054894
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 10806,
+        "net_pnl": -136.0,
+        "profit_factor": 0.9682168731011919,
+        "hit_rate": 0.38339811215991115,
+        "avg_pnl_per_trade": -0.012585600592263557
+      }
+    },
+    "rank_score": 461.53078202995005
+  },
+  {
+    "id": "H05",
+    "name": "Short when spread shock is extreme wide",
+    "rationale": "Liquidity stress often coincides with adverse short-term drift.",
+    "expected_regime": "Spread expansion events.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 3988,
+        "net_pnl": -101.0,
+        "profit_factor": 0.9354219948849105,
+        "hit_rate": 0.3668505516549649,
+        "avg_pnl_per_trade": -0.025325977933801404
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 493,
+        "net_pnl": 79.0,
+        "profit_factor": 1.4817073170731707,
+        "hit_rate": 0.49290060851926976,
+        "avg_pnl_per_trade": 0.16024340770791076
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 570,
+        "net_pnl": 36.0,
+        "profit_factor": 1.16,
+        "hit_rate": 0.45789473684210524,
+        "avg_pnl_per_trade": 0.06315789473684211
+      }
+    },
+    "rank_score": 117.05487804878048
+  }
+]

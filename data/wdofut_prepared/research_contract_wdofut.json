@@ -1,0 +1,56 @@
+{
+  "dataset": {
+    "ticker": "WDOFUT_F_0",
+    "period_start": "2026-01-02",
+    "period_end": "2026-02-03",
+    "session_filter": "09:00-18:30 UTC"
+  },
+  "label": {
+    "horizon": "5 minutes",
+    "target_type": "event_triple_barrier",
+    "price_col": "mid",
+    "target_formula": "y_tb in {-1,0,1} by first-touch in (t, t+H]: +1 if log(mid_s/mid_t)>=u before -d, -1 if <=-d before +u, 0 otherwise",
+    "timestamp_alignment": "features at t (or <=t), label from strict future window (t,t+H]"
+  },
+  "execution": {
+    "side": "long/short/flat",
+    "order_type": "market",
+    "latency_model": "none",
+    "max_position": 1,
+    "sizing": "fixed 1-lot"
+  },
+  "costs": {
+    "spread_model": "embedded in execution model if applicable",
+    "slippage_model": "0",
+    "fees_model": "0",
+    "total_cost_formula": "0"
+  },
+  "validation": {
+    "split": "temporal",
+    "walk_forward": true,
+    "train_ratio": 0.6,
+    "val_ratio": 0.2,
+    "test_ratio": 0.2
+  },
+  "metrics": {
+    "primary": [
+      "net_pnl",
+      "sharpe",
+      "profit_factor",
+      "max_drawdown",
+      "hit_rate",
+      "turnover"
+    ],
+    "minimum_samples": 100
+  },
+  "kill_switch": {
+    "min_oos_sharpe": 0.0,
+    "min_profit_factor": 1.05,
+    "max_drawdown_limit": "",
+    "min_trades_oos": 50
+  },
+  "label_params": {
+    "up_barrier": 0.00035,
+    "down_barrier": 0.00035
+  }
+}

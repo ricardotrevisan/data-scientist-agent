@@ -1,0 +1,68 @@
+[
+  {
+    "id": "H01",
+    "name": "Short after positive extreme z-score",
+    "rationale": "Micro mean-reversion after stretched short-term move.",
+    "expected_regime": "High intrabar displacement without sustained follow-through.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 33694,
+        "net_pnl": 4376.0,
+        "profit_factor": 1.717377049180328,
+        "hit_rate": 0.3109158900694486,
+        "avg_pnl_per_trade": 0.12987475514928473
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 11368,
+        "net_pnl": 1847.0,
+        "profit_factor": 1.7999133824166307,
+        "hit_rate": 0.3655876143560873,
+        "avg_pnl_per_trade": 0.16247361013370865
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 10806,
+        "net_pnl": 1293.0,
+        "profit_factor": 1.4136276391554703,
+        "hit_rate": 0.40893947806774017,
+        "avg_pnl_per_trade": 0.11965574680732927
+      }
+    },
+    "rank_score": 3324.4400173235167
+  },
+  {
+    "id": "H05",
+    "name": "Short when spread shock is extreme wide",
+    "rationale": "Liquidity stress often coincides with adverse short-term drift.",
+    "expected_regime": "Spread expansion events.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 3988,
+        "net_pnl": 578.0,
+        "profit_factor": 1.594039054470709,
+        "hit_rate": 0.38891675025075223,
+        "avg_pnl_per_trade": 0.14493480441323972
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 493,
+        "net_pnl": 132.0,
+        "profit_factor": 2.073170731707317,
+        "hit_rate": 0.5172413793103449,
+        "avg_pnl_per_trade": 0.26774847870182555
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 570,
+        "net_pnl": 103.0,
+        "profit_factor": 1.5819209039548023,
+        "hit_rate": 0.49122807017543857,
+        "avg_pnl_per_trade": 0.18070175438596492
+      }
+    },
+    "rank_score": 273.6585365853659
+  }
+]

@@ -1,0 +1,349 @@
+{
+  "input_parquet": "/home/trevisan/repositories/open-data-scientist/data/wdofut_prepared/wdofut_features_v1.parquet",
+  "cost_per_trade": 0.0,
+  "thresholds": {
+    "z_upper_quantile": 0.9,
+    "z_lower_quantile": 0.05,
+    "spread_upper_quantile": 0.9,
+    "spread_lower_quantile": 0.03,
+    "vol_regime_upper_quantile": 0.8,
+    "vol_regime_lower_quantile": 0.2
+  },
+  "split": {
+    "train_ratio": 0.6,
+    "val_ratio": 0.2,
+    "test_ratio": 0.2
+  },
+  "hypotheses": [
+    {
+      "id": "H01",
+      "name": "Short after positive extreme z-score",
+      "rationale": "Micro mean-reversion after stretched short-term move.",
+      "expected_regime": "High intrabar displacement without sustained follow-through.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 33694,
+          "net_pnl": 715.0,
+          "profit_factor": 1.0652015320080248,
+          "hit_rate": 0.3466789339348252,
+          "avg_pnl_per_trade": 0.021220395322609366
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 11368,
+          "net_pnl": 930.0,
+          "profit_factor": 1.2346115035317862,
+          "hit_rate": 0.4305066854327938,
+          "avg_pnl_per_trade": 0.08180858550316679
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 10806,
+          "net_pnl": -261.0,
+          "profit_factor": 0.944715102732472,
+          "hit_rate": 0.4127336664815843,
+          "avg_pnl_per_trade": -0.024153248195446973
+        }
+      },
+      "rank_score": 1148.188698284561
+    },
+    {
+      "id": "H07",
+      "name": "Momentum on ret_sum_10",
+      "rationale": "Simple continuation baseline at intermediate lookback.",
+      "expected_regime": "Directional short-term flow.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 230266,
+          "net_pnl": -1913.0,
+          "profit_factor": 0.9774389093310689,
+          "hit_rate": 0.35992721461266536,
+          "avg_pnl_per_trade": -0.008307783172504843
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 78135,
+          "net_pnl": 342.0,
+          "profit_factor": 1.0107753867481648,
+          "hit_rate": 0.4105842452166123,
+          "avg_pnl_per_trade": 0.004377039738913419
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 82440,
+          "net_pnl": -604.0,
+          "profit_factor": 0.9835323627242488,
+          "hit_rate": 0.4375788452207666,
+          "avg_pnl_per_trade": -0.00732654051431344
+        }
+      },
+      "rank_score": 345.6851822678724
+    },
+    {
+      "id": "H05",
+      "name": "Short when spread shock is extreme wide",
+      "rationale": "Liquidity stress often coincides with adverse short-term drift.",
+      "expected_regime": "Spread expansion events.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 3988,
+          "net_pnl": -23.0,
+          "profit_factor": 0.9857585139318885,
+          "hit_rate": 0.399197592778335,
+          "avg_pnl_per_trade": -0.005767301905717151
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 493,
+          "net_pnl": 51.0,
+          "profit_factor": 1.2698412698412698,
+          "hit_rate": 0.486815415821501,
+          "avg_pnl_per_trade": 0.10344827586206896
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 570,
+          "net_pnl": 33.0,
+          "profit_factor": 1.1434782608695653,
+          "hit_rate": 0.4614035087719298,
+          "avg_pnl_per_trade": 0.05789473684210526
+        }
+      },
+      "rank_score": 64.76190476190476
+    },
+    {
+      "id": "H06",
+      "name": "Long when spread is unusually compressed",
+      "rationale": "Tighter spread can favor continuation with lower friction.",
+      "expected_regime": "High-liquidity micro regime.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 1036,
+          "net_pnl": -1.0,
+          "profit_factor": 0.9975,
+          "hit_rate": 0.38513513513513514,
+          "avg_pnl_per_trade": -0.0009652509652509653
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 187,
+          "net_pnl": 26.0,
+          "profit_factor": 1.3823529411764706,
+          "hit_rate": 0.5026737967914439,
+          "avg_pnl_per_trade": 0.13903743315508021
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 221,
+          "net_pnl": -6.0,
+          "profit_factor": 0.9428571428571428,
+          "hit_rate": 0.4479638009049774,
+          "avg_pnl_per_trade": -0.027149321266968326
+        }
+      },
+      "rank_score": 35.94117647058823
+    },
+    {
+      "id": "H03",
+      "name": "Momentum on 20-step return in calm regime",
+      "rationale": "Short-horizon continuation under low vol regime.",
+      "expected_regime": "Low-to-moderate volatility periods.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 49595,
+          "net_pnl": -33.0,
+          "profit_factor": 0.998216794553118,
+          "hit_rate": 0.3724770642201835,
+          "avg_pnl_per_trade": -0.0006653896562153443
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 17212,
+          "net_pnl": 8.0,
+          "profit_factor": 1.001141389641889,
+          "hit_rate": 0.40768068789216827,
+          "avg_pnl_per_trade": 0.00046479200557750407
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 19245,
+          "net_pnl": -206.0,
+          "profit_factor": 0.9763544536271809,
+          "hit_rate": 0.4419849311509483,
+          "avg_pnl_per_trade": -0.01070407898155365
+        }
+      },
+      "rank_score": 8.009131117135112
+    },
+    {
+      "id": "H09",
+      "name": "Trade only when spread_delta compresses + momentum confirms",
+      "rationale": "Spread compression plus directional move may indicate clean impulse.",
+      "expected_regime": "Compression-to-move transitions.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 987,
+          "net_pnl": -9.0,
+          "profit_factor": 0.9777227722772277,
+          "hit_rate": 0.4002026342451874,
+          "avg_pnl_per_trade": -0.00911854103343465
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 267,
+          "net_pnl": -7.0,
+          "profit_factor": 0.9411764705882353,
+          "hit_rate": 0.41947565543071164,
+          "avg_pnl_per_trade": -0.026217228464419477
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 368,
+          "net_pnl": 0.0,
+          "profit_factor": 1.0,
+          "hit_rate": 0.4592391304347826,
+          "avg_pnl_per_trade": 0.0
+        }
+      },
+      "rank_score": -6.588235294117647
+    },
+    {
+      "id": "H08",
+      "name": "Contrarian on ret_sum_5",
+      "rationale": "Quick mean-reversion at very short lookback.",
+      "expected_regime": "Choppy microstructure periods.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 203205,
+          "net_pnl": 1749.0,
+          "profit_factor": 1.023873222134258,
+          "hit_rate": 0.36913953888929896,
+          "avg_pnl_per_trade": 0.008607071676385915
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 68114,
+          "net_pnl": -42.0,
+          "profit_factor": 0.9984944078004014,
+          "hit_rate": 0.40893208444666296,
+          "avg_pnl_per_trade": -0.0006166133247203218
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 72492,
+          "net_pnl": 129.0,
+          "profit_factor": 1.0040433801404212,
+          "hit_rate": 0.44188324228880427,
+          "avg_pnl_per_trade": 0.0017795067041880483
+        }
+      },
+      "rank_score": -41.93676512761686
+    },
+    {
+      "id": "H10",
+      "name": "Volatility breakout continuation",
+      "rationale": "When vol_20 exceeds vol_60 and lag return aligns, follow move.",
+      "expected_regime": "Volatility expansion with directional impulse.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 79642,
+          "net_pnl": -296.0,
+          "profit_factor": 0.9895583462678144,
+          "hit_rate": 0.3522262123000427,
+          "avg_pnl_per_trade": -0.0037166319278772505
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 25890,
+          "net_pnl": -54.0,
+          "profit_factor": 0.9948800606807623,
+          "hit_rate": 0.405291618385477,
+          "avg_pnl_per_trade": -0.002085747392815759
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 26161,
+          "net_pnl": -148.0,
+          "profit_factor": 0.9871023965141612,
+          "hit_rate": 0.4329727456901495,
+          "avg_pnl_per_trade": -0.005657276098008486
+        }
+      },
+      "rank_score": -53.72352327676116
+    },
+    {
+      "id": "H04",
+      "name": "Contrarian on 20-step return in high-vol regime",
+      "rationale": "Reversal bias when volatility regime is elevated.",
+      "expected_regime": "High-volatility bursts.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 53313,
+          "net_pnl": 802.0,
+          "profit_factor": 1.0411704312114989,
+          "hit_rate": 0.3804325399058391,
+          "avg_pnl_per_trade": 0.015043235233432746
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 18758,
+          "net_pnl": -230.0,
+          "profit_factor": 0.9707825203252033,
+          "hit_rate": 0.4073995095425952,
+          "avg_pnl_per_trade": -0.012261435121015034
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 19923,
+          "net_pnl": 553.0,
+          "profit_factor": 1.0645349515696114,
+          "hit_rate": 0.4578627716709331,
+          "avg_pnl_per_trade": 0.027756863926115545
+        }
+      },
+      "rank_score": -223.27997967479675
+    },
+    {
+      "id": "H02",
+      "name": "Long after negative extreme z-score",
+      "rationale": "Symmetric mean-reversion for downside stretch.",
+      "expected_regime": "Short-lived panic downticks.",
+      "metrics": {
+        "train": {
+          "rows": 335337,
+          "trades": 16508,
+          "net_pnl": -195.0,
+          "profit_factor": 0.9662746454514008,
+          "hit_rate": 0.3384419675308941,
+          "avg_pnl_per_trade": -0.011812454567482433
+        },
+        "val": {
+          "rows": 111779,
+          "trades": 5728,
+          "net_pnl": -470.0,
+          "profit_factor": 0.8094079480940795,
+          "hit_rate": 0.348463687150838,
+          "avg_pnl_per_trade": -0.08205307262569832
+        },
+        "test": {
+          "rows": 111779,
+          "trades": 5700,
+          "net_pnl": 41.0,
+          "profit_factor": 1.0170620058260507,
+          "hit_rate": 0.4287719298245614,
+          "avg_pnl_per_trade": 0.007192982456140351
+        }
+      },
+      "rank_score": -380.42173560421736
+    }
+  ]
+}

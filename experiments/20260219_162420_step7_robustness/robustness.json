@@ -1,0 +1,449 @@
+{
+  "candidate_id": "H05",
+  "input_features": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_09/data/wdofut_features_v1.parquet",
+  "h05_spread_quantile": 0.95,
+  "sensitivity_grid": [
+    {
+      "spread_quantile": 0.9,
+      "cost_per_trade": 0.0,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 3016,
+          "net_pnl": 383.0,
+          "profit_factor": 1.447953216374269,
+          "hit_rate": 0.4104774535809019
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 1061,
+          "net_pnl": 159.0,
+          "profit_factor": 1.481818181818182,
+          "hit_rate": 0.46088595664467485
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 1330,
+          "net_pnl": 206.0,
+          "profit_factor": 1.4373673036093417,
+          "hit_rate": 0.5090225563909775
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.9,
+      "cost_per_trade": 0.01,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 3016,
+          "net_pnl": 352.84000000000003,
+          "profit_factor": 1.404271408602397,
+          "hit_rate": 0.4104774535809019
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 1061,
+          "net_pnl": 148.39000000000001,
+          "profit_factor": 1.4420052424639584,
+          "hit_rate": 0.46088595664467485
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 1330,
+          "net_pnl": 192.7,
+          "profit_factor": 1.4035348564488097,
+          "hit_rate": 0.5090225563909775
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.9,
+      "cost_per_trade": 0.02,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 3016,
+          "net_pnl": 322.68,
+          "profit_factor": 1.3623338124326274,
+          "hit_rate": 0.4104774535809019
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 1061,
+          "net_pnl": 137.78,
+          "profit_factor": 1.403526241799438,
+          "hit_rate": 0.46088595664467485
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 1330,
+          "net_pnl": 179.39999999999998,
+          "profit_factor": 1.3706152129901261,
+          "hit_rate": 0.5090225563909775
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.93,
+      "cost_per_trade": 0.0,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 1979,
+          "net_pnl": 280.0,
+          "profit_factor": 1.5175600739371533,
+          "hit_rate": 0.414855987872663
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 665,
+          "net_pnl": 128.0,
+          "profit_factor": 1.6213592233009708,
+          "hit_rate": 0.5022556390977444
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 763,
+          "net_pnl": 66.0,
+          "profit_factor": 1.2299651567944252,
+          "hit_rate": 0.46264744429882043
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.93,
+      "cost_per_trade": 0.01,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 1979,
+          "net_pnl": 260.21,
+          "profit_factor": 1.4709001411560318,
+          "hit_rate": 0.414855987872663
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 665,
+          "net_pnl": 121.34999999999997,
+          "profit_factor": 1.5797620753905688,
+          "hit_rate": 0.5022556390977444
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 763,
+          "net_pnl": 58.36999999999999,
+          "profit_factor": 1.2005152868430096,
+          "hit_rate": 0.46264744429882043
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.93,
+      "cost_per_trade": 0.02,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 1979,
+          "net_pnl": 240.41999999999996,
+          "profit_factor": 1.4261557005104941,
+          "hit_rate": 0.414855987872663
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 665,
+          "net_pnl": 114.7,
+          "profit_factor": 1.5394600696077518,
+          "hit_rate": 0.5022556390977444
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 763,
+          "net_pnl": 50.739999999999995,
+          "profit_factor": 1.1718834688346889,
+          "hit_rate": 0.46264744429882043
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.95,
+      "cost_per_trade": 0.0,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 1416,
+          "net_pnl": 217.0,
+          "profit_factor": 1.5305623471882641,
+          "hit_rate": 0.442090395480226
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 476,
+          "net_pnl": 116.0,
+          "profit_factor": 1.8169014084507042,
+          "hit_rate": 0.542016806722689
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 471,
+          "net_pnl": 65.0,
+          "profit_factor": 1.3823529411764706,
+          "hit_rate": 0.4989384288747346
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.95,
+      "cost_per_trade": 0.01,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 1416,
+          "net_pnl": 202.83999999999997,
+          "profit_factor": 1.4865435356200531,
+          "hit_rate": 0.442090395480226
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 476,
+          "net_pnl": 111.24,
+          "profit_factor": 1.7715355805243447,
+          "hit_rate": 0.542016806722689
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 471,
+          "net_pnl": 60.28999999999999,
+          "profit_factor": 1.349791134834068,
+          "hit_rate": 0.4989384288747346
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.95,
+      "cost_per_trade": 0.02,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 1416,
+          "net_pnl": 188.67999999999995,
+          "profit_factor": 1.444161958568739,
+          "hit_rate": 0.442090395480226
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 476,
+          "net_pnl": 106.48,
+          "profit_factor": 1.7275211806504518,
+          "hit_rate": 0.542016806722689
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 471,
+          "net_pnl": 55.58,
+          "profit_factor": 1.3181089743589751,
+          "hit_rate": 0.4989384288747346
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.97,
+      "cost_per_trade": 0.0,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 849,
+          "net_pnl": 151.0,
+          "profit_factor": 1.6015936254980079,
+          "hit_rate": 0.4734982332155477
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 283,
+          "net_pnl": 49.0,
+          "profit_factor": 1.5051546391752577,
+          "hit_rate": 0.5159010600706714
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 284,
+          "net_pnl": 31.0,
+          "profit_factor": 1.2792792792792793,
+          "hit_rate": 0.5
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.97,
+      "cost_per_trade": 0.01,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 849,
+          "net_pnl": 142.50999999999996,
+          "profit_factor": 1.5578345794026698,
+          "hit_rate": 0.4734982332155477
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 283,
+          "net_pnl": 46.16999999999999,
+          "profit_factor": 1.4693504117108875,
+          "hit_rate": 0.5159010600706714
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 284,
+          "net_pnl": 28.159999999999997,
+          "profit_factor": 1.2504892367906066,
+          "hit_rate": 0.5
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.97,
+      "cost_per_trade": 0.02,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 849,
+          "net_pnl": 134.01999999999998,
+          "profit_factor": 1.515580518581212,
+          "hit_rate": 0.4734982332155477
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 283,
+          "net_pnl": 43.339999999999996,
+          "profit_factor": 1.434529777421296,
+          "hit_rate": 0.5159010600706714
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 284,
+          "net_pnl": 25.319999999999993,
+          "profit_factor": 1.22241742796908,
+          "hit_rate": 0.5
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.99,
+      "cost_per_trade": 0.0,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 299,
+          "net_pnl": 44.0,
+          "profit_factor": 1.488888888888889,
+          "hit_rate": 0.44816053511705684
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 95,
+          "net_pnl": 6.0,
+          "profit_factor": 1.15,
+          "hit_rate": 0.4842105263157895
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 192,
+          "net_pnl": 15.0,
+          "profit_factor": 1.1898734177215189,
+          "hit_rate": 0.4895833333333333
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.99,
+      "cost_per_trade": 0.01,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 299,
+          "net_pnl": 41.00999999999999,
+          "profit_factor": 1.44746317512275,
+          "hit_rate": 0.44816053511705684
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 95,
+          "net_pnl": 5.049999999999999,
+          "profit_factor": 1.1247221536181777,
+          "hit_rate": 0.4842105263157895
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 192,
+          "net_pnl": 13.079999999999995,
+          "profit_factor": 1.163540885221305,
+          "hit_rate": 0.4895833333333333
+        }
+      }
+    },
+    {
+      "spread_quantile": 0.99,
+      "cost_per_trade": 0.02,
+      "metrics": {
+        "train": {
+          "rows": 28224,
+          "trades": 299,
+          "net_pnl": 38.019999999999996,
+          "profit_factor": 1.4075026795284034,
+          "hit_rate": 0.44816053511705684
+        },
+        "val": {
+          "rows": 9408,
+          "trades": 95,
+          "net_pnl": 4.099999999999998,
+          "profit_factor": 1.1000488042947776,
+          "hit_rate": 0.4842105263157895
+        },
+        "test": {
+          "rows": 9409,
+          "trades": 192,
+          "net_pnl": 11.159999999999997,
+          "profit_factor": 1.1378458498023727,
+          "hit_rate": 0.4895833333333333
+        }
+      }
+    }
+  ],
+  "daily_test_stability": [
+    {
+      "day": "2026-01-29",
+      "rows": 1610,
+      "trades": 89,
+      "net_pnl": 29.0,
+      "hit_rate": 0.550561797752809
+    },
+    {
+      "day": "2026-01-30",
+      "rows": 3558,
+      "trades": 184,
+      "net_pnl": 31.0,
+      "hit_rate": 0.5652173913043478
+    },
+    {
+      "day": "2026-02-02",
+      "rows": 2164,
+      "trades": 106,
+      "net_pnl": -11.0,
+      "hit_rate": 0.3584905660377358
+    },
+    {
+      "day": "2026-02-03",
+      "rows": 2077,
+      "trades": 92,
+      "net_pnl": 16.0,
+      "hit_rate": 0.4782608695652174
+    }
+  ],
+  "base_test_metrics": {
+    "rows": 9409,
+    "trades": 471,
+    "net_pnl": 65.0,
+    "profit_factor": 1.3823529411764706,
+    "hit_rate": 0.4989384288747346
+  }
+}

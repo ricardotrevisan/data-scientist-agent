@@ -1,0 +1,68 @@
+[
+  {
+    "id": "H02",
+    "name": "Long after negative extreme z-score",
+    "rationale": "Symmetric mean-reversion for downside stretch.",
+    "expected_regime": "Short-lived panic downticks.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 16508,
+        "net_pnl": 1873.0,
+        "profit_factor": 1.5646668676514923,
+        "hit_rate": 0.3143930215653017,
+        "avg_pnl_per_trade": 0.11346014053792101
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 5728,
+        "net_pnl": 504.0,
+        "profit_factor": 1.355681016231475,
+        "hit_rate": 0.33537011173184356,
+        "avg_pnl_per_trade": 0.08798882681564246
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 5700,
+        "net_pnl": 767.0,
+        "profit_factor": 1.4662613981762918,
+        "hit_rate": 0.4231578947368421,
+        "avg_pnl_per_trade": 0.13456140350877194
+      }
+    },
+    "rank_score": 683.2632321806634
+  },
+  {
+    "id": "H08",
+    "name": "Contrarian on ret_sum_5",
+    "rationale": "Quick mean-reversion at very short lookback.",
+    "expected_regime": "Choppy microstructure periods.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 203205,
+        "net_pnl": 955.0,
+        "profit_factor": 1.0170779685264664,
+        "hit_rate": 0.27988976649196623,
+        "avg_pnl_per_trade": 0.00469968750768928
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 68114,
+        "net_pnl": 209.0,
+        "profit_factor": 1.0099183750949128,
+        "hit_rate": 0.31243209912793257,
+        "avg_pnl_per_trade": 0.003068385353965411
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 72492,
+        "net_pnl": -133.0,
+        "profit_factor": 0.9950773558368495,
+        "hit_rate": 0.3708685096286487,
+        "avg_pnl_per_trade": -0.0018346852066434918
+      }
+    },
+    "rank_score": 211.07294039483676
+  }
+]

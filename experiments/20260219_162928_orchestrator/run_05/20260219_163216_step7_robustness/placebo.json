@@ -1,0 +1,24 @@
+{
+  "candidate_id": "H05",
+  "base_test_metrics": {
+    "rows": 9409,
+    "trades": 1330,
+    "net_pnl": 29.0,
+    "profit_factor": 1.054003724394786,
+    "hit_rate": 0.4255639097744361
+  },
+  "label_shuffle_test_metrics": {
+    "rows": 9409,
+    "trades": 1330,
+    "net_pnl": -3.0,
+    "profit_factor": 0.9947643979057592,
+    "hit_rate": 0.42857142857142855
+  },
+  "signal_inversion_test_metrics": {
+    "rows": 9409,
+    "trades": 1330,
+    "net_pnl": -29.0,
+    "profit_factor": 0.9487632508833922,
+    "hit_rate": 0.4037593984962406
+  }
+}

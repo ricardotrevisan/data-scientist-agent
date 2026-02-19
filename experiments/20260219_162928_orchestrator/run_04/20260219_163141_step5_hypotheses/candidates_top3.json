@@ -1,0 +1,68 @@
+[
+  {
+    "id": "H01",
+    "name": "Short after positive extreme z-score",
+    "rationale": "Micro mean-reversion after stretched short-term move.",
+    "expected_regime": "High intrabar displacement without sustained follow-through.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 33694,
+        "net_pnl": 379.0,
+        "profit_factor": 1.0391245999793537,
+        "hit_rate": 0.2987475514928474,
+        "avg_pnl_per_trade": 0.011248293464711819
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 11368,
+        "net_pnl": 423.0,
+        "profit_factor": 1.1175979983319433,
+        "hit_rate": 0.35362420830401126,
+        "avg_pnl_per_trade": 0.037209711470795215
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 10806,
+        "net_pnl": -117.0,
+        "profit_factor": 0.9725609756097561,
+        "hit_rate": 0.383768276883213,
+        "avg_pnl_per_trade": -0.010827318156579679
+      }
+    },
+    "rank_score": 472.743953294412
+  },
+  {
+    "id": "H05",
+    "name": "Short when spread shock is extreme wide",
+    "rationale": "Liquidity stress often coincides with adverse short-term drift.",
+    "expected_regime": "Spread expansion events.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 3988,
+        "net_pnl": 59.0,
+        "profit_factor": 1.0418736692689852,
+        "hit_rate": 0.36810431293881646,
+        "avg_pnl_per_trade": 0.014794383149448346
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 493,
+        "net_pnl": 87.0,
+        "profit_factor": 1.5506329113924051,
+        "hit_rate": 0.4969574036511156,
+        "avg_pnl_per_trade": 0.17647058823529413
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 570,
+        "net_pnl": 42.0,
+        "profit_factor": 1.1917808219178083,
+        "hit_rate": 0.45789473684210524,
+        "avg_pnl_per_trade": 0.07368421052631578
+      }
+    },
+    "rank_score": 134.90506329113924
+  }
+]

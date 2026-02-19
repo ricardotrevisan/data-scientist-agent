@@ -1,0 +1,128 @@
+{
+  "input_parquet": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_162928_orchestrator/run_01/data/wdofut_labels_tb.parquet",
+  "cost_per_trade": 0.0,
+  "split": {
+    "train_ratio": 0.6,
+    "val_ratio": 0.2,
+    "test_ratio": 0.2
+  },
+  "baselines": {
+    "no_trade": {
+      "train": {
+        "rows": 335337,
+        "trades": 0,
+        "net_pnl": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown": 0.0,
+        "hit_rate": 0.0,
+        "turnover": 0.0
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 0,
+        "net_pnl": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown": 0.0,
+        "hit_rate": 0.0,
+        "turnover": 0.0
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 0,
+        "net_pnl": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": 0.0,
+        "max_drawdown": 0.0,
+        "hit_rate": 0.0,
+        "turnover": 0.0
+      },
+      "oos_val_test": {
+        "rows": 223558,
+        "trades": 0,
+        "net_pnl": 0.0,
+        "hit_rate": 0.0,
+        "turnover": 0.0
+      }
+    },
+    "lagged_return_sign": {
+      "train": {
+        "rows": 335337,
+        "trades": 151478,
+        "net_pnl": -809.0,
+        "sharpe": -2.606897736280115,
+        "profit_factor": 0.9833395115120063,
+        "max_drawdown": 819.0,
+        "hit_rate": 0.3152206921137063,
+        "turnover": 283000.0
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 49787,
+        "net_pnl": -320.0,
+        "sharpe": -1.701620197875961,
+        "profit_factor": 0.9820657961105196,
+        "max_drawdown": 342.0,
+        "hit_rate": 0.3519593468174423,
+        "turnover": 92722.0
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 51133,
+        "net_pnl": -485.0,
+        "sharpe": -2.377139817287193,
+        "profit_factor": 0.9769672792895474,
+        "max_drawdown": 491.0,
+        "hit_rate": 0.4023233528249858,
+        "turnover": 92718.0
+      },
+      "oos_val_test": {
+        "rows": 223558,
+        "trades": 100920,
+        "net_pnl": -805.0,
+        "hit_rate": 0.37747720967102655,
+        "turnover": 185440.0
+      }
+    },
+    "spread_vol_rule": {
+      "train": {
+        "rows": 335337,
+        "trades": 67921,
+        "net_pnl": -164.0,
+        "sharpe": -0.7790475465844986,
+        "profit_factor": 0.9926258992805755,
+        "max_drawdown": 214.0,
+        "hit_rate": 0.32502466100322436,
+        "turnover": 127948.0
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 21803,
+        "net_pnl": -24.0,
+        "sharpe": -0.2032439538247814,
+        "profit_factor": 0.9965635738831615,
+        "max_drawdown": 69.0,
+        "hit_rate": 0.31922212539558775,
+        "turnover": 41218.0
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 23126,
+        "net_pnl": -245.0,
+        "sharpe": -1.8421332248212556,
+        "profit_factor": 0.9726775956284153,
+        "max_drawdown": 267.0,
+        "hit_rate": 0.37715125832396434,
+        "turnover": 42878.0
+      },
+      "oos_val_test": {
+        "rows": 223558,
+        "trades": 44929,
+        "net_pnl": -269.0,
+        "hit_rate": 0.3490395958067173,
+        "turnover": 84096.0
+      }
+    }
+  }
+}

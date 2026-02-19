@@ -1,0 +1,68 @@
+[
+  {
+    "id": "H01",
+    "name": "Short after positive extreme z-score",
+    "rationale": "Micro mean-reversion after stretched short-term move.",
+    "expected_regime": "High intrabar displacement without sustained follow-through.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 33694,
+        "net_pnl": 715.0,
+        "profit_factor": 1.0652015320080248,
+        "hit_rate": 0.3466789339348252,
+        "avg_pnl_per_trade": 0.021220395322609366
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 11368,
+        "net_pnl": 930.0,
+        "profit_factor": 1.2346115035317862,
+        "hit_rate": 0.4305066854327938,
+        "avg_pnl_per_trade": 0.08180858550316679
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 10806,
+        "net_pnl": -261.0,
+        "profit_factor": 0.944715102732472,
+        "hit_rate": 0.4127336664815843,
+        "avg_pnl_per_trade": -0.024153248195446973
+      }
+    },
+    "rank_score": 1148.188698284561
+  },
+  {
+    "id": "H07",
+    "name": "Momentum on ret_sum_10",
+    "rationale": "Simple continuation baseline at intermediate lookback.",
+    "expected_regime": "Directional short-term flow.",
+    "metrics": {
+      "train": {
+        "rows": 335337,
+        "trades": 230266,
+        "net_pnl": -1913.0,
+        "profit_factor": 0.9774389093310689,
+        "hit_rate": 0.35992721461266536,
+        "avg_pnl_per_trade": -0.008307783172504843
+      },
+      "val": {
+        "rows": 111779,
+        "trades": 78135,
+        "net_pnl": 342.0,
+        "profit_factor": 1.0107753867481648,
+        "hit_rate": 0.4105842452166123,
+        "avg_pnl_per_trade": 0.004377039738913419
+      },
+      "test": {
+        "rows": 111779,
+        "trades": 82440,
+        "net_pnl": -604.0,
+        "profit_factor": 0.9835323627242488,
+        "hit_rate": 0.4375788452207666,
+        "avg_pnl_per_trade": -0.00732654051431344
+      }
+    },
+    "rank_score": 345.6851822678724
+  }
+]

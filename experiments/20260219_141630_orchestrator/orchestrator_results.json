@@ -1,0 +1,1107 @@
+{
+  "created_at_utc": "20260219_141630",
+  "runs_executed": 20,
+  "search_space": {
+    "auto_derive": true,
+    "derive_labels": true,
+    "cost_grid": [
+      0.0,
+      0.01
+    ],
+    "z_upper_grid": [
+      0.95
+    ],
+    "z_lower_grid": [
+      0.05
+    ],
+    "spread_upper_grid": [
+      0.93,
+      0.95,
+      0.97
+    ],
+    "spread_lower_grid": [
+      0.05
+    ],
+    "vol_upper_grid": [
+      0.85
+    ],
+    "vol_lower_grid": [
+      0.15
+    ],
+    "top_k_grid": [
+      3
+    ],
+    "num_windows_grid": [
+      4,
+      6
+    ],
+    "h_minutes_grid": [
+      3.0,
+      5.0
+    ],
+    "up_barrier_grid": [
+      0.00025,
+      0.00035
+    ],
+    "down_barrier_grid": [
+      0.00025,
+      0.00035
+    ],
+    "price_col_grid": [
+      "mid"
+    ],
+    "min_test_profit_factor_grid": [
+      1.0,
+      1.05
+    ],
+    "min_sensitivity_positive_ratio_grid": [
+      0.5,
+      0.6
+    ],
+    "require_placebo_outperform_shuffle": true,
+    "require_inversion_nonequivalent": true
+  },
+  "leaderboard": [
+    {
+      "run_id": 1,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01/20260219_141703_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01/20260219_141705_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01/20260219_141705_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01/20260219_141705_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_01",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 339.0,
+        "candidate_test_net_pnl": -52.0,
+        "candidate_test_profit_factor": 0.9788617886178862,
+        "placebo_base_test_net_pnl": -25.0,
+        "placebo_shuffle_test_net_pnl": 7.0,
+        "placebo_invert_test_net_pnl": 25.0,
+        "sensitivity_test_positive_ratio": 0.3333333333333333
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": false,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": false
+      }
+    },
+    {
+      "run_id": 2,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_02/20260219_141738_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_02/20260219_141740_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_02/20260219_141740_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_02/20260219_141740_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_02",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 339.0,
+        "candidate_test_net_pnl": -52.0,
+        "candidate_test_profit_factor": 0.9788617886178862,
+        "placebo_base_test_net_pnl": -25.0,
+        "placebo_shuffle_test_net_pnl": 7.0,
+        "placebo_invert_test_net_pnl": 25.0,
+        "sensitivity_test_positive_ratio": 0.3333333333333333
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": false,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": false
+      }
+    },
+    {
+      "run_id": 3,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_03/20260219_141813_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_03/20260219_141814_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_03/20260219_141815_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_03/20260219_141815_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_03",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 339.0,
+        "candidate_test_net_pnl": -52.0,
+        "candidate_test_profit_factor": 0.9788617886178862,
+        "placebo_base_test_net_pnl": -25.0,
+        "placebo_shuffle_test_net_pnl": 7.0,
+        "placebo_invert_test_net_pnl": 25.0,
+        "sensitivity_test_positive_ratio": 0.3333333333333333
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": false,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": false
+      }
+    },
+    {
+      "run_id": 4,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_04/20260219_141848_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_04/20260219_141849_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_04/20260219_141850_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_04/20260219_141850_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_04",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 339.0,
+        "candidate_test_net_pnl": -52.0,
+        "candidate_test_profit_factor": 0.9788617886178862,
+        "placebo_base_test_net_pnl": -25.0,
+        "placebo_shuffle_test_net_pnl": 7.0,
+        "placebo_invert_test_net_pnl": 25.0,
+        "sensitivity_test_positive_ratio": 0.3333333333333333
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": false,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": false
+      }
+    },
+    {
+      "run_id": 5,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00035
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H02",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_05/20260219_141923_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_05/20260219_141924_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_05/20260219_141925_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_05/20260219_141925_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_05",
+      "candidate": "H02",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 382.0,
+        "candidate_test_net_pnl": 804.0,
+        "candidate_test_profit_factor": 1.4297167290219135,
+        "placebo_base_test_net_pnl": -138.0,
+        "placebo_shuffle_test_net_pnl": -115.0,
+        "placebo_invert_test_net_pnl": 138.0,
+        "sensitivity_test_positive_ratio": 0.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": true,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": false
+      }
+    },
+    {
+      "run_id": 6,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00035
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H02",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_06/20260219_141958_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_06/20260219_142000_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_06/20260219_142000_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_06/20260219_142000_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_06",
+      "candidate": "H02",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 382.0,
+        "candidate_test_net_pnl": 804.0,
+        "candidate_test_profit_factor": 1.4297167290219135,
+        "placebo_base_test_net_pnl": -138.0,
+        "placebo_shuffle_test_net_pnl": -115.0,
+        "placebo_invert_test_net_pnl": 138.0,
+        "sensitivity_test_positive_ratio": 0.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": true,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": false
+      }
+    },
+    {
+      "run_id": 7,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00035
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H02",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_07/20260219_142034_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_07/20260219_142035_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_07/20260219_142036_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_07/20260219_142036_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_07",
+      "candidate": "H02",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 382.0,
+        "candidate_test_net_pnl": 804.0,
+        "candidate_test_profit_factor": 1.4297167290219135,
+        "placebo_base_test_net_pnl": -138.0,
+        "placebo_shuffle_test_net_pnl": -115.0,
+        "placebo_invert_test_net_pnl": 138.0,
+        "sensitivity_test_positive_ratio": 0.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": true,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": false
+      }
+    },
+    {
+      "run_id": 8,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00035
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H02",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_08/20260219_142109_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_08/20260219_142111_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_08/20260219_142111_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_08/20260219_142111_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_08",
+      "candidate": "H02",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 382.0,
+        "candidate_test_net_pnl": 804.0,
+        "candidate_test_profit_factor": 1.4297167290219135,
+        "placebo_base_test_net_pnl": -138.0,
+        "placebo_shuffle_test_net_pnl": -115.0,
+        "placebo_invert_test_net_pnl": 138.0,
+        "sensitivity_test_positive_ratio": 0.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": true,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": false
+      }
+    },
+    {
+      "run_id": 9,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00035,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_09/20260219_142144_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_09/20260219_142146_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_09/20260219_142146_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_09/20260219_142146_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_09",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 1045.0,
+        "candidate_test_net_pnl": 658.0,
+        "candidate_test_profit_factor": 1.3358856559469117,
+        "placebo_base_test_net_pnl": 66.0,
+        "placebo_shuffle_test_net_pnl": 131.0,
+        "placebo_invert_test_net_pnl": -66.0,
+        "sensitivity_test_positive_ratio": 1.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": true,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": true
+      }
+    },
+    {
+      "run_id": 10,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00035,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_10/20260219_142218_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_10/20260219_142220_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_10/20260219_142220_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_10/20260219_142220_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_10",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 1045.0,
+        "candidate_test_net_pnl": 658.0,
+        "candidate_test_profit_factor": 1.3358856559469117,
+        "placebo_base_test_net_pnl": 66.0,
+        "placebo_shuffle_test_net_pnl": 131.0,
+        "placebo_invert_test_net_pnl": -66.0,
+        "sensitivity_test_positive_ratio": 1.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": true,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": true
+      }
+    },
+    {
+      "run_id": 11,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00035,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_11/20260219_142252_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_11/20260219_142253_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_11/20260219_142254_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_11/20260219_142254_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_11",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 1045.0,
+        "candidate_test_net_pnl": 658.0,
+        "candidate_test_profit_factor": 1.3358856559469117,
+        "placebo_base_test_net_pnl": 66.0,
+        "placebo_shuffle_test_net_pnl": 131.0,
+        "placebo_invert_test_net_pnl": -66.0,
+        "sensitivity_test_positive_ratio": 1.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": true,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": true
+      }
+    },
+    {
+      "run_id": 12,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00035,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_12/20260219_142326_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_12/20260219_142327_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_12/20260219_142328_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_12/20260219_142328_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_12",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 1045.0,
+        "candidate_test_net_pnl": 658.0,
+        "candidate_test_profit_factor": 1.3358856559469117,
+        "placebo_base_test_net_pnl": 66.0,
+        "placebo_shuffle_test_net_pnl": 131.0,
+        "placebo_invert_test_net_pnl": -66.0,
+        "sensitivity_test_positive_ratio": 1.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": true,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": true
+      }
+    },
+    {
+      "run_id": 13,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00035,
+        "down_barrier": 0.00035
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_13/20260219_142359_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_13/20260219_142401_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_13/20260219_142401_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_13/20260219_142401_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_13",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 312.0,
+        "candidate_test_net_pnl": -180.0,
+        "candidate_test_profit_factor": 0.9160055996266916,
+        "placebo_base_test_net_pnl": -50.0,
+        "placebo_shuffle_test_net_pnl": -6.0,
+        "placebo_invert_test_net_pnl": 50.0,
+        "sensitivity_test_positive_ratio": 0.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": false,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": false
+      }
+    },
+    {
+      "run_id": 14,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00035,
+        "down_barrier": 0.00035
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_14/20260219_142433_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_14/20260219_142435_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_14/20260219_142435_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_14/20260219_142435_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_14",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 312.0,
+        "candidate_test_net_pnl": -180.0,
+        "candidate_test_profit_factor": 0.9160055996266916,
+        "placebo_base_test_net_pnl": -50.0,
+        "placebo_shuffle_test_net_pnl": -6.0,
+        "placebo_invert_test_net_pnl": 50.0,
+        "sensitivity_test_positive_ratio": 0.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": false,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": false
+      }
+    },
+    {
+      "run_id": 15,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00035,
+        "down_barrier": 0.00035
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_15/20260219_142507_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_15/20260219_142508_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_15/20260219_142508_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_15/20260219_142509_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_15",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 312.0,
+        "candidate_test_net_pnl": -180.0,
+        "candidate_test_profit_factor": 0.9160055996266916,
+        "placebo_base_test_net_pnl": -50.0,
+        "placebo_shuffle_test_net_pnl": -6.0,
+        "placebo_invert_test_net_pnl": 50.0,
+        "sensitivity_test_positive_ratio": 0.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": false,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": false
+      }
+    },
+    {
+      "run_id": 16,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 3.0,
+        "price_col": "mid",
+        "up_barrier": 0.00035,
+        "down_barrier": 0.00035
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_16/20260219_142541_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_16/20260219_142542_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_16/20260219_142542_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_16/20260219_142542_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_16",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 312.0,
+        "candidate_test_net_pnl": -180.0,
+        "candidate_test_profit_factor": 0.9160055996266916,
+        "placebo_base_test_net_pnl": -50.0,
+        "placebo_shuffle_test_net_pnl": -6.0,
+        "placebo_invert_test_net_pnl": 50.0,
+        "sensitivity_test_positive_ratio": 0.0
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": false,
+        "placebo_outperforms_randomized_label": false,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": false
+      }
+    },
+    {
+      "run_id": 17,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 5.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_17/20260219_142614_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_17/20260219_142616_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_17/20260219_142616_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_17/20260219_142616_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_17",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 391.0,
+        "candidate_test_net_pnl": -18.0,
+        "candidate_test_profit_factor": 0.9931895573212258,
+        "placebo_base_test_net_pnl": 35.0,
+        "placebo_shuffle_test_net_pnl": 32.0,
+        "placebo_invert_test_net_pnl": -35.0,
+        "sensitivity_test_positive_ratio": 0.6
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": false,
+        "placebo_outperforms_randomized_label": true,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": true
+      }
+    },
+    {
+      "run_id": 18,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 5.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.0,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_18/20260219_142648_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_18/20260219_142650_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_18/20260219_142650_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_18/20260219_142650_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_18",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 391.0,
+        "candidate_test_net_pnl": -18.0,
+        "candidate_test_profit_factor": 0.9931895573212258,
+        "placebo_base_test_net_pnl": 35.0,
+        "placebo_shuffle_test_net_pnl": 32.0,
+        "placebo_invert_test_net_pnl": -35.0,
+        "sensitivity_test_positive_ratio": 0.6
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.0": false,
+        "placebo_outperforms_randomized_label": true,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": true
+      }
+    },
+    {
+      "run_id": 19,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 5.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.5,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_19/20260219_142722_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_19/20260219_142724_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_19/20260219_142724_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_19/20260219_142724_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_19",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 391.0,
+        "candidate_test_net_pnl": -18.0,
+        "candidate_test_profit_factor": 0.9931895573212258,
+        "placebo_base_test_net_pnl": 35.0,
+        "placebo_shuffle_test_net_pnl": 32.0,
+        "placebo_invert_test_net_pnl": -35.0,
+        "sensitivity_test_positive_ratio": 0.6
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": false,
+        "placebo_outperforms_randomized_label": true,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.5": true
+      }
+    },
+    {
+      "run_id": 20,
+      "cost_per_trade": 0.0,
+      "thresholds": {
+        "z_upper_quantile": 0.95,
+        "z_lower_quantile": 0.05,
+        "spread_upper_quantile": 0.93,
+        "spread_lower_quantile": 0.05,
+        "vol_regime_upper_quantile": 0.85,
+        "vol_regime_lower_quantile": 0.15
+      },
+      "label_params": {
+        "h_minutes": 5.0,
+        "price_col": "mid",
+        "up_barrier": 0.00025,
+        "down_barrier": 0.00025
+      },
+      "search_params": {
+        "top_k": 3,
+        "num_windows": 4,
+        "candidate_id": "H01",
+        "min_test_profit_factor": 1.05,
+        "min_sensitivity_positive_ratio": 0.6,
+        "require_placebo_outperform_shuffle": true,
+        "require_inversion_nonequivalent": true,
+        "derive_labels": true
+      },
+      "decision": "NO-GO",
+      "step5_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_20/20260219_142756_step5_hypotheses",
+      "step6_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_20/20260219_142758_step6_backtest",
+      "step7_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_20/20260219_142758_step7_robustness",
+      "step8_dir": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_20/20260219_142758_step8_verdict",
+      "run_scope": "/home/trevisan/repositories/open-data-scientist/experiments/20260219_141630_orchestrator/run_20",
+      "candidate": "H01",
+      "evidence": {
+        "baseline_oos_net_pnl_no_trade": 0.0,
+        "candidate_val_net_pnl": 391.0,
+        "candidate_test_net_pnl": -18.0,
+        "candidate_test_profit_factor": 0.9931895573212258,
+        "placebo_base_test_net_pnl": 35.0,
+        "placebo_shuffle_test_net_pnl": 32.0,
+        "placebo_invert_test_net_pnl": -35.0,
+        "sensitivity_test_positive_ratio": 0.6
+      },
+      "rules": {
+        "beats_baseline_oos": true,
+        "test_profit_factor_ge_1.05": false,
+        "placebo_outperforms_randomized_label": true,
+        "inversion_not_equivalent": false,
+        "sensitivity_positive_ratio_ge_0.6": true
+      }
+    }
+  ],
+  "best_valid": null
+}
